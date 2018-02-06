@@ -5,18 +5,281 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Red Integral de Bienestar Social</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
 
 </head>
 <body>
-  <header class="col-md-12 bg-primary">
-  	<button type="button" class=" col-md-1 col-md-offset-11 btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Login</button>
+	<!-- Barra de Navegacion -->
+	<div id="Inicio"></div>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" name="button" class="navbar-toggle" data-toggle="collapse" data-target="#Menu">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand"><img src="./img/logo4.png"></a>
+			</div>
 
-  	<h1>RIBS</h1>
-  	<p>Red Integral de Bienestar Social</p>
-	</header>
+			<div class="collapse navbar-collapse" id="Menu">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#Inicio">Inicio</a></li>
+					<li><a href="#Acerca">Acerca de</a></li>
+					<li><a href="#Asociaciones">Asociaciones</a></li>
+					<li><a href="#Eventos">Eventos</a></li>
+					<li><a href="#Contacto">Contacto</a></li>
+					<li class="active"><a href="#" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Iniciar Sesión</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-<!--1er modal para regisrar LOGIN-->
+	<!-- Slider
+	<div class="carousel slide" data-ride="carousel" id="slider1">
+		<ol class="carousel-indicators">
+			<li data-target="#slider1" data-slide-to="0" class="active"></li>
+			<li data-target="#slider1" data-slide-to="1"></li>
+			<li data-target="#slider1" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="./img/header.jpg">
+				//COMENTAR
+				<div class="carousel-caption">
+					<h1>BIENVENIDO A NUESTRA PAGINA</h1>
+					<br>
+					<button type="button" class="btn btn-default">Empezar</button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="./img/imagen1.jpg">
+			</div>
+			<div class="item">
+				<img src="./img/bien.jpg">
+			</div>
+		</div>
+		<a class="left carousel-control" href="#slider1" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Atras</span>
+		</a>
+		<a class="right carousel-control" href="#slider1" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Siguiente</span>
+		</a>
+	</div>-->
+	<div class="fondo2">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>Red Integral de Bienestar Social</h1>
+					<img src="./img/logo4.png" alt="">
+
+				</div>
+			</div>
+			<div id="Acerca"></div>
+		</div>
+	</div>
+	<!-- Acerca de Nosotros -->
+	<div class="fondo1">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h4>Acerca de Nosotros</h4>
+					<p>
+						Somos una Red de Organizaciones Civiles que busca fortalecer el sector filantrópico contribuyendo al bienestar
+						social de Nvo. Casas Gdes. y la región.
+					</p>
+					<br>
+					<h4>Historia</h4>
+					<p>
+						Somos una Red de organizaciones e instituciones de Nuevo Casas Grandes y la región, que busca empoderar a las
+						organizaciones civiles a través de la vinculación con los 3 sectores de la sociedad, con el objetivo de generar
+						proyectos de impacto colectivo e incidencia en políticas públicas.
+					</p>
+				</div>
+				<div class="col-md-6">
+					<img src="./img/foto1.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+			<div id="Asociaciones"></div>
+		</div>
+	</div>
+
+	<!-- Asociaciones -->
+	<div class="container text-center">
+		<h2>ASOCIACIONES</h2>
+		<br><br>
+		<div class="row">
+			<div class="col-sm-4 asociacion">
+				<div class="col-sm-6">
+					<img src="./img/logosolo.png" alt="" class="icono">
+				</div>
+				<div class="col-sm-6">
+					<h3>Asociación 1</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<a href="#">Sitio Web</a>
+				</div>
+			</div>
+			<div class="col-sm-4 asociacion">
+				<div class="col-sm-6">
+					<img src="./img/logosolo.png" alt="" class="icono">
+				</div>
+				<div class="col-sm-6">
+					<h3>Asociación 2</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<a href="#">Sitio Web</a>
+				</div>
+			</div>
+			<div class="col-sm-4 asociacion">
+				<div class="col-sm-6">
+					<img src="./img/logosolo.png" alt="" class="icono">
+				</div>
+				<div class="col-sm-6">
+					<h3>Asociación 3</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<a href="#">Sitio Web</a>
+				</div>
+			</div>
+			<div class="col-sm-4 asociacion">
+				<div class="col-sm-6">
+					<img src="./img/logosolo.png" alt="" class="icono">
+				</div>
+				<div class="col-sm-6">
+					<h3>Asociación 4</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<a href="#">Sitio Web</a>
+				</div>
+			</div>
+			<div class="col-sm-4 asociacion">
+				<div class="col-sm-6">
+					<img src="./img/logosolo.png" alt="" class="icono">
+				</div>
+				<div class="col-sm-6">
+					<h3>Asociación 5</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<a href="#">Sitio Web</a>
+				</div>
+			</div>
+			<div class="col-sm-4 asociacion">
+				<div class="col-sm-6">
+					<img src="./img/logosolo.png" alt="" class="icono">
+				</div>
+				<div class="col-sm-6">
+					<h3>Asociación 6</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<a href="#">Sitio Web</a>
+				</div>
+			</div>
+		</div>
+		<div id="Eventos"></div>
+	</div>
+
+	<!-- Eventos -->
+
+	<div class="container text-center">
+		<h2>EVENTOS</h2>
+		<br><br>
+		<div class="row">
+			<div class="col-sm-4 caja">
+				<div class="vermas"></div>
+				<div class="caja2">
+					<img src="./img/evento1.jpg" alt="" class="eventos">
+				</div>
+				<h3>Titulo del Evento 1</h3>
+				<button type="button"class="btn btn-default">Ver detalles</button>
+			</div>
+			<div class="col-sm-4 caja">
+				<div class="caja2">
+					<img src="./img/evento2.jpg" alt="" class="eventos">
+				</div>
+				<h3>Titulo del Evento 2</h3>
+				<button type="button"class="btn btn-default">Ver detalles</button>
+			</div>
+			<div class="col-sm-4 caja">
+				<div class="caja2">
+					<img src="./img/evento3.jpg" alt="" class="eventos">
+				</div>
+				<h3>Titulo del Evento 3</h3>
+				<button type="button"class="btn btn-default">Ver detalles</button>
+			</div>
+			<div class="col-sm-4 caja">
+				<div class="caja2">
+					<img src="./img/evento4.jpg" alt="" class="eventos">
+				</div>
+				<h3>Titulo del Evento 4</h3>
+				<button type="button"class="btn btn-default">Ver detalles</button>
+			</div>
+			<div class="col-sm-4 caja">
+				<div class="caja2">
+					<img src="./img/evento5.jpg" alt="" class="eventos">
+				</div>
+				<h3>Titulo del Evento 5</h3>
+				<button type="button"class="btn btn-default">Ver detalles</button>
+			</div>
+			<div class="col-sm-4 caja">
+				<div class="caja2">
+					<img src="./img/evento6.jpg" alt="" class="eventos">
+				</div>
+				<h3>Titulo del Evento 6</h3>
+				<button type="button"class="btn btn-default">Ver detalles</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Mision y Vision -->
+	<div class="fondo1">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<h4>Misión</h4>
+					<p>
+						Fortalecer el sector filantrópico contribuyendo a elevar el bienestar social de Nuevo Casas Grandes y la región.
+					</p>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<img src="./img/foto2.jpg" alt="" class="img-responsive">
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<h4>Visión</h4>
+					<p>
+						Fortalecer el sector filantrópico contribuyendo a elevar el bienestar social de Nuevo Casas Grandes y la región.
+					</p>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<img src="./img/foto3.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Contacto -->
+		<footer class="container-fluid text-center" id="Contacto">
+			<div class="row">
+				<div class="col-sm-4">
+					<h3>Contáctanos</h3>
+					<br>
+					<h5><b>Dirección:</b></h5>
+					<h5>Calle Pablo VI 1430 Fracc. Juan Pablo II Nuevo Casas Grandes</h5>
+					<h5><b>Teléfono:</b> 01 636 694 6606</h5>
+					<h5><b>Correo Electrónico:</b> laredncg@gmail.com</h5>
+				</div>
+				<div class="col-sm-4">
+					<h3>Redes Sociales</h3>
+					<a href="https://www.facebook.com/pg/RIBSNCG/about/?ref=page_internal" class="redes"><i class="fab fa-facebook fa-5x"></i></a>
+					<h5><span class="fab fa-facebook-messenger"></span>  @RIBSNCG</h5>
+				</div>
+				<div class="col-sm-4">
+					<img src="./img/logosolo3.png" alt="" class="icono">
+					<h5>Red Integral de Bienestar Social (RIBS)</h5>
+					<h5>Organización no gubernamental (ONG)</h5>
+				</div>
+			</div>
+		</footer>
+
+		<!--1er modal para regisrar LOGIN-->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -43,8 +306,13 @@
       </div>
     </div>
   </div>
-  
+
+	<script src="./js/smooth-scroll.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script defer src="./js/fontawesome-all.min.js"></script>
+	<script src="./js/index.js">
+
+	</script>
 </body>
 </html>
