@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="../css/bootstrap.min.css">
+  	<link rel="stylesheet" href="../css/dashboard.css">
+  	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+    <title>Panel de Administraión</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" name="button" class="navbar-toggle" data-toggle="collapse" data-target="#Menu">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand"><img src="../img/logo5.png"></a>
+        </div>
+        <p class="navbar-text titula"> Red Integral de Bienetar Social </p>
+        <p class="navbar-text"> | </p>
+        <p class="navbar-text"> Hoy es 11 de Febrero del 2018 </p>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><i class="fas fa-bell"></i><span class="notificaiones">0</span> &nbsp&nbsp Notificaciones</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mi perfil
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Cambiar Imagen</a></li>
+              <li><a href="#">Cerrar Sesión</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="navbar-right">
+          <form class="form-inline">
+            <div class="input-group">
+              <input type="text" class="form-control busca" placeholder="Buscar">
+              <span class="input-group-btn">
+                <button class="btn buscar" type="button">
+                  <i class="fas fa-search"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- MENU VERTICAL -->
+    <div class="col-md-2 vertical text-center">
+      <div class="row">
+        <div class="contenedorimagen">
+          <img src="../img/perfil3.jpg" alt="">
+        </div>
+        <h5>¡ Bienvenida !</h5>
+        <h5>Ing. Cristina Rodríguez</h5>
+      </div>
+      <div class="row">
+        <a href="./inicio.html" class="activo">
+          <i class="fas fa-home fa-2x"></i>
+          <br>Inicio<br>
+          <i class="fas fa-ellipsis-h fa-lg"></i>
+        </a>
+      </div>
+      <div class="row">
+        <a href="./publicar.html">&nbsp
+          <i class="fas fa-share-square fa-2x"></i>
+          <br>Publicar<br>
+          <i class="fas fa-ellipsis-h fa-lg"></i>
+        </a>
+      </div>
+      <div class="row">
+        <a href="./actas.html">
+          <i class="fas fa-book fa-2x"></i>
+          <br>Actas<br>
+          <i class="fas fa-ellipsis-h fa-lg"></i>
+        </a>
+      </div>
+      <div class="row">
+        <a href="./eventos.html">
+          <i class="fas fa-calendar-alt fa-2x"></i>
+          <br>Eventos<br>
+          <i class="fas fa-ellipsis-h fa-lg"></i>
+        </a>
+      </div>
+      <div class="row">
+        <a href="./finanzas.html">
+          <i class="fas fa-dollar-sign fa-2x"></i>
+          <br>Finanzas<br>
+          <i class="fas fa-ellipsis-h fa-lg"></i>
+        </a>
+      </div>
+      <div class="row">
+        <a href="./usuarios.html">
+          <i class="fas fa-user-plus fa-2x"></i>
+          <br>Usuarios<br>
+          <i class="fas fa-ellipsis-h fa-lg"></i>
+        </a>
+      </div>
+    </div>
+    <!-- CONTENIDO -->
+    <div class="col-md-offset-2 col-md-10 contenido">
+      <div class="recientes">
+        <h4>Actividad Reciente</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+          in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+          in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="col-md-5 cuotas">
+        <h4>Estado Financiero</h4>
+        <img src="../img/cuotas.jpg" alt="" style="width:100%;">
+      </div>
+      <div class="col-md-5 col-md-offset-1 estadofin">
+        <h4>Cuotas</h4>
+        <table class="table table-striped">
+          <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
+          <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
+          <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
+          <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
+          <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
+          <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
+          <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
+          <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
+          <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
+          <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
+        </table>
+      </div>
+
+    </div>
+    <!-- SCRIPTS -->
+    <script src="../js/smooth-scroll.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script defer src="../js/fontawesome-all.min.js"></script>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

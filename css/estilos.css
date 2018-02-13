@@ -4,7 +4,7 @@ body{
 }
 .navbar{
   border-radius: 0;
-  background-color: #0064AF;
+  background-color: #0064AF /*/#337ab7*/;
   color: #FFF;
   font-size: 1.2em;
   border: 0;
@@ -127,7 +127,7 @@ h4{
 }
 
 .fondo2{
-    background-color: #0064AF;
+    background-color: #0064AF /*#337ab7*/;
   /*  background-image: url("../img/header1.jpg");*/
     padding-top: 20px;
     padding-bottom: 20px;
