@@ -7,8 +7,8 @@ var rect = acerca.getBoundingClientRect();
 
 var lastScrollTop = 0;
 var azul = 0;
-
 window.addEventListener("scroll", function(){
+   console.log(rect.top);
    if (window.pageYOffset > rect.top -85) {
      barra.style.backgroundColor = "rgba(28,180,230,"+azul+")";
      azul+=0.05;
