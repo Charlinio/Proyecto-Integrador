@@ -107,7 +107,7 @@
     <!-- CONTENIDO -->
     <div class="col-md-offset-2 col-md-10 contenido">
       <div class="col-md-2 controlacta">
-        <button type="button" name="button" class="nuevaacta"><i class="fas fa-file-alt fa-5x"></i></button>
+        <button type="button" name="button" class="nuevaacta" data-toggle="modal" data-target="#crearActa" data-whatever="@mdo"><i class="fas fa-file-alt fa-5x"></i></button>
         <p>Crear Nueva Acta</p>
         <button type="button" name="button" class="nuevaacta"><i class="fas fa-shield-alt fa-5x"></i></button>
         <p>Permisos</p>
@@ -135,6 +135,63 @@
         <div class="col-md-3 cajacarpeta">
           <button type="button" name="button" class="carpetas"><i class="fas fa-folder fa-5x"></i></button>
           <p>2018</p>
+        </div>
+      </div>
+    </div>
+
+ <!-- Modal para CONVOCATORIA-->
+    <div class="modal fade" id="crearActa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">Nueva Acta</h4>
+          </div>
+          <div class="modal-body">
+            <form class="row">
+              <div class="row nuevaconvocatoria">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="recipient-name" class="control-label">Referencia</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="control-label">Hora de inicio</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                </div>
+              </div>
+            <br>
+            <div class="col-md-12 nuevaconvocatoria">
+              <label for="recipient-name" class="control-label">Orden del día</label>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">I.Lista de asistencia y verificación de quórum.</label>
+                <div>
+                   <textarea name="text" cols="70"  wrap="soft"></textarea>
+                </div>
+               
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">II.</label>
+                <input type="text" class="form-control" id="recipient-name" value="Revisión y aprobación del Orden del día.">
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">III.</label>
+                <input type="text" class="form-control" id="recipient-name" value="Revisión y aprobación del Acta anterior.">
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">IV.</label>
+                <input type="text" class="form-control" id="recipient-name" value="Informe Financiero RIBS.">
+              </div>
+              <button type="button" class="btn btn-primary">+</button>
+              <button type="button" class="btn btn-primary">-</button>
+            </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
         </div>
       </div>
     </div>
