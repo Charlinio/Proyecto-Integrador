@@ -107,7 +107,11 @@
     <!-- CONTENIDO -->
     <div class="col-md-offset-2 col-md-10 contenido">
        <div class="">
-        <li class="active"><a href="#" type="button" data-toggle="modal" data-target="#realizarConvocatoria" data-whatever="@mdo">Convocatoria</a></li>
+        <li class="listaconvocatoria">
+          <a href="#" type="button" data-toggle="modal" data-target="#realizarConvocatoria" data-whatever="@mdo" class="convocatoriona">
+            <i class="fas fa-file"></i> Convocatoria
+          </a>
+        </li>
       </div>
       <div class="recientes">
         <h4>Actividad Reciente</h4>
@@ -153,36 +157,56 @@
           </div>
           <div class="modal-body">
             <form class="row">
-            <div class="col-md-6">
+              <div class="row nuevaconvocatoria">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="recipient-name" class="control-label">Fecha de creación</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-name" class="control-label">Referencia</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="control-label">Tipo de Sesión</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="recipient-name" class="control-label">Lugar</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-name" class="control-label">Hora</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                </div>
+              </div>
+            <br>
+            <div class="col-md-12 nuevaconvocatoria">
+              <label for="recipient-name" class="control-label">Orden del día</label>
               <div class="form-group">
-                <label for="recipient-name" class="control-label">fecha de creación</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <label for="recipient-name" class="control-label col-md-2">I.</label>
+                <div class="col-md-10">
+                  <input type="text" class="form-control" id="recipient-name" value="Lista de asistencia y verificación de quórum.">
+                </div>
               </div>
               <div class="form-group">
-                <label for="recipient-name" class="control-label">referencia</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <label for="recipient-name" class="control-label">II.</label>
+                <input type="text" class="form-control" id="recipient-name" value="Revisión y aprobación del Orden del día.">
               </div>
               <div class="form-group">
-                <label for="message-text" class="control-label">hora</label>
-                <input type="text" class="form-control" id="recipient-name">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="recipient-name" class="control-label">lugar</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <label for="recipient-name" class="control-label">III.</label>
+                <input type="text" class="form-control" id="recipient-name" value="Revisión y aprobación del Acta anterior.">
               </div>
               <div class="form-group">
-                <label for="recipient-name" class="control-label">sesión</label>
-                <input type="text" class="form-control" id="recipient-name">
-              </div>
-              <div class="form-group">
-                <label for="recipient-name" class="control-label">orden del día</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <label for="recipient-name" class="control-label">IV.</label>
+                <input type="text" class="form-control" id="recipient-name" value="Informe Financiero RIBS.">
               </div>
               <button type="button" class="btn btn-primary">+</button>
+              <button type="button" class="btn btn-primary">-</button>
             </div>
-              
             </form>
           </div>
           <div class="modal-footer">
