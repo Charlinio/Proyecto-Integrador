@@ -11,25 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/admin', function() {
-  return view('plantilla');
-});
-Route::get('/admin/actas', function() {
-  return view('actas');
-});
-Route::get('/admin/eventos', function() {
-  return view('eventos');
-});
-Route::get('/admin/usuarios', function() {
-  return view('usuarios');
-});
-Route::get('/admin/publicar', function() {
-  return view('publicar');
-});
-Route::get('/admin/finanzas', function() {
-  return view('finanzas');
+Route::get('/', 'IndexController@Index');
+Route::group(['prefix'=>'admin','as'=>'admin.'],function(){
+  Route::get('/', 'AdminInicioController@index');
+  Route::get('/actas','AdminActasController@index');
+  Route::get('/eventos','AdminEventosController@index');
+  Route::get('/usuarios', 'AdminUsuariosController@index');
+  Route::get('/publicar', 'AdminPublicarController@index');
+  Route::get('/finanzas', 'AdminFinanzasController@index');
+  Route::resource('admin','AdminInicioController');
+  Route::resource('actas','AdminActasController');
+  Route::resource('eventos','AdminEventosController');
+  Route::resource('usuarios','AdminUsuariosController');
+  Route::resource('publicar','AdminPublicarController');
+  Route::resource('finanzas','AdminFinanzasController');
 });
