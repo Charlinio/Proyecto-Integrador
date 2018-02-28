@@ -3,43 +3,152 @@
 Inicio
 @endsection
 @section('contenido')
-  <div class="">
-   <li class="listaconvocatoria">
-     <a href="#" type="button" data-toggle="modal" data-target="#realizarConvocatoria" data-whatever="@mdo" class="convocatoriona">
-       <i class="fas fa-file"></i> Nueva Convocatoria
-     </a>
-   </li>
-  </div>
+<div class="col-md-12 titulo">
+  <h5><i class="fas fa-home"></i> Inicio</h5>
+</div>
+<div class="row">
+  <li class="listaconvocatoria">
+    <a href="#" type="button" data-toggle="modal" data-target="#realizarConvocatoria" data-whatever="@mdo" class="convocatoriona">
+      <i class="fas fa-calendar-alt"></i> Evento +
+    </a>
+  </li>
+  <li class="listaconvocatoria">
+    <a href="#" type="button" data-toggle="modal" data-target="#realizarConvocatoria" data-whatever="@mdo" class="convocatoriona">
+      <i class="fas fa-book"></i> Acta +
+    </a>
+  </li>
+ <li class="listaconvocatoria">
+   <a href="#" type="button" data-toggle="modal" data-target="#realizarConvocatoria" data-whatever="@mdo" class="convocatoriona">
+     <i class="fas fa-file"></i> Convocatoria +
+   </a>
+ </li>
+</div>
+
   <div class="recientes">
     <h4>Actividad Reciente</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-      in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-      in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Actividad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>24/02/2018</td>
+          <td>Se creó convocatoria</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>24/02/2018</td>
+          <td>Cambios en el estado financiero</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>25/02/2018</td>
+          <td>Publicación de evento</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="col-md-offset-10">
+      <a href="#">Ver todas las actividades</a>
+    </div>
+
   </div>
-  <div class="col-md-5 cuotas">
+  <div class="col-md-12 cuotas">
     <h4>Estado Financiero</h4>
-    <img src="../img/cuotas.jpg" alt="" style="width:100%;">
+    <canvas id="myChart" width="200" height="50"></canvas>
   </div>
-  <div class="col-md-5 col-md-offset-1 estadofin">
-    <h4>Cuotas</h4>
-    <table class="table table-striped">
-      <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
-      <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
-      <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
-      <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
-      <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
-      <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
-      <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
-      <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
-      <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
-      <tr><td>lorem</td><td>lorem</td><td>lorem</td><td>lorem</td></tr>
+  <div class="col-md-12 estadofin">
+    <h4>Cuotas 2018</h4>
+    <table class="table table-dark">
+      <thead class="cuots">
+        <tr>
+          <th scope="col">Organizacion</th>
+          <th scope="col">Enero</th>
+          <th scope="col">Febrero</th>
+          <th scope="col">Marzo</th>
+          <th scope="col">Abril</th>
+          <th scope="col">Mayo</th>
+          <th scope="col">Junio</th>
+          <th scope="col">Julio</th>
+          <th scope="col">Agosto</th>
+          <th scope="col">Septiembre</th>
+          <th scope="col">Ocubre</th>
+          <th scope="col">Noviembre</th>
+          <th scope="col">Diciembre</th>
+          <th scope="col">Adeudo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Celebrando la vida</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Celebrando la vida</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Celebrando la vida</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Celebrando la vida</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Celebrando la vida</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Celebrando la vida</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Celebrando la vida</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Celebrando la vida</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Celebrando la vida</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Celebrando la vida</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Celebrando la vida</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Celebrando la vida</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Celebrando la vida</td>
+          <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+          <td>0</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 
@@ -122,5 +231,28 @@ Inicio
       </div>
     </div>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/Chart.min.js"></script>
+  <script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'line',
 
+      // The data for our dataset
+      data: {
+          labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+          datasets: [{
+              label: "Saldo",
+              backgroundColor: '#7FC6A4',
+              borderColor: '#7FC6A4',
+              data: [0, 10, 5, 2, 20, 30, 45, 42, 50, 51, 52, 60],
+          }]
+      },
+
+      // Configuration options go here
+      options: {}
+  });
+  </script>
 @endsection

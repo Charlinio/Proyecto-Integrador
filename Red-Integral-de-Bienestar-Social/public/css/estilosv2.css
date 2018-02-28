@@ -43,6 +43,10 @@ ul.navbar-nav > li{
   color: #FFF;
 }
 
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: rgba(28,180,230,1);
+}
+
 .carousel-control.left{
   background-image: none;
 }
@@ -52,15 +56,12 @@ ul.navbar-nav > li{
 
 .carousel-inner img{
   width: 100%;
-  min-height: 200px;
 }
 
 
 .btn{
-  font-size: 18px;
   color: #FFF;
-  padding: 12px 22px;
-  background-color: #0064AF;
+  background-color: #1cb4e6;
   border: 2px solid #FFF;
 }
 
@@ -74,6 +75,7 @@ ul.navbar-nav > li{
   max-height: 140px;
   margin: 1% auto;
   cursor: pointer;
+  border-radius: 50%;
 }
 
 .eventos{
@@ -111,7 +113,7 @@ ul.navbar-nav > li{
 .descripcione:hover{
   width: 320px;
   height: 250px;
-  background-color: rgba(28,180,230,0.8);
+  background-color: rgba(28,180,230,0.3);
   color: rgba(255,255,255,1);
 }
 

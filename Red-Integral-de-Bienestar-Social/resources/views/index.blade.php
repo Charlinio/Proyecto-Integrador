@@ -147,224 +147,203 @@
 		<br><br>
 		<div class="row">
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logosolo.png" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>Red Integral de Bienestar Social</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/accionesquedejanhuella.png" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>Acciones que dejan huella</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/blaspascal.png" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>Instituto Blas Pascal</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/cambiosdestino.jpg" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>Fundacion cambiando destinos</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/cefocane.png" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>CEFOCANEE</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/centrorehabilitacion.png" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>Centro de Rehabilitacion NCG</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/coparmex.jpg" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>COPARMEX</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/corazonesazules.png" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>Corazones Azules en Accion</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/cruzroja.png" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>Cruz Roja Mexicana</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
-					<img src="./img/logos/escucharparaelservicio.emf" alt="" class="icono">
+				<div class="col-md-12">
+					<img src="./img/logos/escucharparaelservicio.png" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
-					<h3>Asociación 1</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<div class="col-md-12">
+					<h3>Escuchar para el Servicio</h3>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/faceta.png" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>FACETA Buenaventura</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/fechac.png" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>FECHAC</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/ficosec.jpg" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>FICOSEC</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/institutomujeres.jpg" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>Instituto Municipal de Mujeres</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/lagaviota.jpg" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>La gaviota</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/oneami.png" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>ONEAMI</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/paquimeitas.png" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>Club de Leones Paquimeitas</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/peepsida.png" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>PEEPSIDA</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/reto.jpg" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>RETO</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/soloporayudar.png" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>Solo por Ayudar</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
 			<div class="col-sm-4 asociacion">
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<img src="./img/logos/voluntariasvicentinas.png" alt="" class="icono">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-md-12">
 					<h3>Voluntarias Vicentinas</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 					<a href="#">Sitio Web</a>
 				</div>
 			</div>
@@ -377,7 +356,7 @@
 		<h2>EVENTOS</h2>
 		<br><br>
 		<div class="row">
-			<div class="col-sm-4 caja">
+			<div class="col-sm-6 col-md-4 caja">
 				<div class="vermas"></div>
 				<div class="caja2">
 					<div class="descripcione">Ver</div>
@@ -385,35 +364,35 @@
 				</div>
 				<h3>Titulo del Evento 1</h3>
 			</div>
-			<div class="col-sm-4 caja">
+			<div class="col-sm-6 col-md-4 caja">
 				<div class="caja2">
 					<div class="descripcione">Ver</div>
 					<img src="./img/evento2.jpg" alt="" class="eventos">
 				</div>
 				<h3>Titulo del Evento 2</h3>
 			</div>
-			<div class="col-sm-4 caja">
+			<div class="col-sm-6 col-md-4 caja">
 				<div class="caja2">
 					<div class="descripcione">Ver</div>
 					<img src="./img/evento3.jpg" alt="" class="eventos">
 				</div>
 				<h3>Titulo del Evento 3</h3>
 			</div>
-			<div class="col-sm-4 caja">
+			<div class="col-sm-6 col-md-4 caja">
 				<div class="caja2">
 					<div class="descripcione">Ver</div>
 					<img src="./img/evento4.jpg" alt="" class="eventos">
 				</div>
 				<h3>Titulo del Evento 4</h3>
 			</div>
-			<div class="col-sm-4 caja">
+			<div class="col-sm-6 col-md-4 caja">
 				<div class="caja2">
 					<div class="descripcione">Ver</div>
 					<img src="./img/evento5.jpg" alt="" class="eventos">
 				</div>
 				<h3>Titulo del Evento 5</h3>
 			</div>
-			<div class="col-sm-4 caja">
+			<div class="col-sm-6 col-md-4 caja">
 				<div class="caja2">
 					<div class="descripcione">Ver</div>
 					<img src="./img/evento6.jpg" alt="" class="eventos">
@@ -453,7 +432,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="exampleModalLabel">Registro</h4>
+          <h4 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h4>
         </div>
         <div class="modal-body">
           <form>
@@ -468,8 +447,8 @@
           </form>
         </div>
         <div class="modal-footer">
+					<button type="button" class="btn">Entrar</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Entrar</button>
         </div>
       </div>
     </div>

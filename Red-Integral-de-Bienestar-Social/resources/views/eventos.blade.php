@@ -3,6 +3,9 @@
 Eventos
 @endsection
 @section('contenido')
+<div class="col-md-12 titulo">
+  <h5><i class="fas fa-calendar-alt"></i> Eventos</h5>
+</div>
 <div class="col-md-2 controlacta">
   <button type="button" name="button" class="nuevaacta" style="color: #B24F4F;"><i class="fas fa-calendar-alt fa-5x"></i></button>
   <p>Publicar nuevo evento</p>
@@ -10,10 +13,6 @@ Eventos
   <p>Permisos</p>
 </div>
 <div class="col-md-10">
-  <div class="row">
-    <h3>Eventos</h3>
-  </div>
-  <br>
   <div class="col-md-3 cajaeventos">
     <button type="button" name="button" class="eventos">
       <div class="verevento"><p>Abrir</p></div>

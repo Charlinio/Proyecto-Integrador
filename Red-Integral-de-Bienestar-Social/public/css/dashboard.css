@@ -11,13 +11,13 @@ body{
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ff85b1;
+  background-color: #818181;
   outline: 1px solid slategrey;
 }
 
 .navbar{
   border-radius: 0;
-  background-color: /*#0064AF*/ #21476D;
+  background-color: /*#0064AF*/ #3E6990;
   color: #FFF;
   border: 0;
   padding: 5px 35px 0px 50px;
@@ -60,11 +60,11 @@ ul.navbar-nav > li{
 }
 
 .navbar-inverse .navbar-nav li a:hover{
-  color: #ff85b1;
+  color: #D96161;
 }
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
     color: #fff;
-    background-color: #ff85b1;
+    background-color: #D96161;
 }
 
 .buscar{
@@ -81,7 +81,7 @@ ul.navbar-nav > li{
   border: none;
   border-bottom: 1px solid #FFF;
   border-radius: 0px;
-  color: #ff85b1;
+  color: #D96161;
 }
 
 .busca:focus{
@@ -96,7 +96,7 @@ ul.navbar-nav > li{
 }
 
 .btn:hover{
-  color: #ff85b1;
+  color: #818181;
 }
 
 .navbar-inverse .navbar-nav li a {
@@ -117,12 +117,12 @@ ul.navbar-nav > li{
     font-size: .9rem;
     width: 15px;
     height: 15px;
-    background-color: #ff85b1;
+    background-color: #D96161;
     line-height: 1.6;
 }
 
 div.vertical{
-  background-color: #21476D;
+  background-color: #272727;
   height: 100vh;
   padding-top: 75px;
   color: #FFF;
@@ -131,7 +131,7 @@ div.vertical{
 }
 
 div.contenido{
-  padding-top: 75px;
+  padding-top: 55px;
 }
 
 div.vertical div.contenedorimagen{
@@ -160,7 +160,7 @@ div.vertical a{
 }
 
 div.vertical a:hover{
-  color: #ff85b1;
+  color: #D96161;
 }
 
 div.vertical div.row{
@@ -168,7 +168,7 @@ div.vertical div.row{
 }
 
 div.vertical a.activo{
-  color: #ff85b1;
+  color: #D96161;
 }
 
 div.vertical div.row h5:last-child{
@@ -258,7 +258,7 @@ div.vertical div.row h5:last-child{
 .nuevaacta{
   font-size: 2rem;
   padding: 15px;
-  color: #3C67A1;
+  color: #3E6990;
   background-color: transparent;
   border: none;
   -webkit-transition: font-size 0.5s; /* Safari */
@@ -274,7 +274,7 @@ div.contenido div, div.contenido div div{
 }
 
 .botones{
-  background-color: #21476D;
+  background-color: #3E6990;
   color: #FFF;
   border: none;
   width: 150px;
@@ -297,15 +297,17 @@ div.contenido div, div.contenido div div{
 
 .listaconvocatoria{
   list-style: none;
+  float: right;
+  margin-bottom: 20px;
 }
 
 .convocatoriona{
   text-decoration: none;
-  display: block;
-  background-color: #21476D;
+  background-color: #3E6990;
   color: white;
-  padding: 10px 0px;
+  padding: 10px;
   width: 200px;
+  margin-right: 15px;
 }
 
 .convocatoriona:hover{
@@ -320,4 +322,60 @@ div.contenido div, div.contenido div div{
 
 .nuevaconvocatoria{
   padding: 0px 10px;
+}
+
+div.titulo{
+  border-bottom: 1px solid #a6a6a6;
+  margin-bottom: 25px;
+  padding: 10px 10px 0px 0px;
+}
+
+div.titulo h5{
+  color: #808080;
+}
+
+.table{
+  margin-bottom: 0px;
+}
+
+table th, table td{
+  text-align: left;
+}
+
+table th{
+  background-color: #3E6990;
+  color: #fff;
+}
+
+.cuots th{
+  background-color: #E65F5C;
+  color: #fff;
+}
+
+div.estadofin, div.cuotas, div.recientes{
+  margin-bottom: 25px;
+  border-bottom: 1px solid #a6a6a6;
+  padding-bottom: 20px;
+}
+
+h4{
+  margin-bottom: 20px;
+}
+
+div.publicacion{
+  border-bottom: 1px solid #a6a6a6;
+  padding: 20px;
+}
+
+div.publicacion img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+}
+
+.publico{
+  text-align: left;
+  line-height: 4;
 }
