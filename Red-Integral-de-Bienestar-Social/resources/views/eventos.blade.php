@@ -1,5 +1,7 @@
 @extends('/includes/principal')
-
+@section('titulo')
+Eventos
+@endsection
 @section('contenido')
 <div class="col-md-2 controlacta">
   <button type="button" name="button" class="nuevaacta" style="color: #B24F4F;"><i class="fas fa-calendar-alt fa-5x"></i></button>

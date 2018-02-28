@@ -294,3 +294,30 @@ div.contenido div, div.contenido div div{
 .pt{
   margin-top: 20px;
 }
+
+.listaconvocatoria{
+  list-style: none;
+}
+
+.convocatoriona{
+  text-decoration: none;
+  display: block;
+  background-color: #21476D;
+  color: white;
+  padding: 10px 0px;
+  width: 200px;
+}
+
+.convocatoriona:hover{
+  text-decoration: none;
+  color: #FFF;
+}
+
+.convocatoriona:link{
+  color: #FFF;
+  text-decoration: none;
+}
+
+.nuevaconvocatoria{
+  padding: 0px 10px;
+}

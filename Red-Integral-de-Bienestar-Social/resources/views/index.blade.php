@@ -6,14 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Red Integral de Bienestar Social</title>
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" href="./css/estilos.css">
+	<link rel="stylesheet" href="./css/estilosv2.css">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
 
 </head>
 <body>
 	<!-- Barra de Navegacion -->
 	<div id="Inicio"></div>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="barra">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" name="button" class="navbar-toggle" data-toggle="collapse" data-target="#Menu">
@@ -37,40 +37,34 @@
 		</div>
 	</nav>
 
-	<!-- Slider
-	<div class="carousel slide" data-ride="carousel" id="slider1">
-		<ol class="carousel-indicators">
-			<li data-target="#slider1" data-slide-to="0" class="active"></li>
-			<li data-target="#slider1" data-slide-to="1"></li>
-			<li data-target="#slider1" data-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner" role="listbox">
-			<div class="item active">
-				<img src="./img/header.jpg">
-				<div class="carousel-caption">
-					<h1>BIENVENIDO A NUESTRA PAGINA</h1>
-					<br>
-					<button type="button" class="btn btn-default">Empezar</button>
-				</div>
-			</div>
-			<div class="item">
-				<img src="./img/imagen1.jpg">
-			</div>
-			<div class="item">
-				<img src="./img/bien.jpg">
-			</div>
-		</div>
-		<a class="left carousel-control" href="#slider1" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only">Atras</span>
-		</a>
-		<a class="right carousel-control" href="#slider1" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Siguiente</span>
-		</a>
-	</div>-->
+	<!-- Slider -->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 
-	<!-- Inicio -->
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="./img/RIBS3.png" alt="RIBS">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+	<!-- Inicio
 	<div class="fondo2">
 		<div class="container">
 			<div class="row">
@@ -80,10 +74,11 @@
 
 				</div>
 			</div>
-			<div id="Acerca"></div>
+
 		</div>
-	</div>
+	</div>-->
 	<!-- Acerca de Nosotros -->
+	<div id="Acerca"></div>
 	<div class="fondo1">
 		<div class="container">
 			<div class="row">
@@ -378,7 +373,6 @@
 	</div>
 
 	<!-- Eventos -->
-
 	<div class="container text-center">
 		<h2>EVENTOS</h2>
 		<br><br>
@@ -386,45 +380,45 @@
 			<div class="col-sm-4 caja">
 				<div class="vermas"></div>
 				<div class="caja2">
+					<div class="descripcione">Ver</div>
 					<img src="./img/evento1.jpg" alt="" class="eventos">
 				</div>
 				<h3>Titulo del Evento 1</h3>
-				<button type="button"class="btn btn-default">Ver detalles</button>
 			</div>
 			<div class="col-sm-4 caja">
 				<div class="caja2">
+					<div class="descripcione">Ver</div>
 					<img src="./img/evento2.jpg" alt="" class="eventos">
 				</div>
 				<h3>Titulo del Evento 2</h3>
-				<button type="button"class="btn btn-default">Ver detalles</button>
 			</div>
 			<div class="col-sm-4 caja">
 				<div class="caja2">
+					<div class="descripcione">Ver</div>
 					<img src="./img/evento3.jpg" alt="" class="eventos">
 				</div>
 				<h3>Titulo del Evento 3</h3>
-				<button type="button"class="btn btn-default">Ver detalles</button>
 			</div>
 			<div class="col-sm-4 caja">
 				<div class="caja2">
+					<div class="descripcione">Ver</div>
 					<img src="./img/evento4.jpg" alt="" class="eventos">
 				</div>
 				<h3>Titulo del Evento 4</h3>
-				<button type="button"class="btn btn-default">Ver detalles</button>
 			</div>
 			<div class="col-sm-4 caja">
 				<div class="caja2">
+					<div class="descripcione">Ver</div>
 					<img src="./img/evento5.jpg" alt="" class="eventos">
 				</div>
 				<h3>Titulo del Evento 5</h3>
-				<button type="button"class="btn btn-default">Ver detalles</button>
 			</div>
 			<div class="col-sm-4 caja">
 				<div class="caja2">
+					<div class="descripcione">Ver</div>
 					<img src="./img/evento6.jpg" alt="" class="eventos">
 				</div>
 				<h3>Titulo del Evento 6</h3>
-				<button type="button"class="btn btn-default">Ver detalles</button>
 			</div>
 		</div>
 	</div>
@@ -465,11 +459,11 @@
           <form>
             <div class="form-group">
               <label for="recipient-name" class="control-label">Correo:</label>
-              <input type="text" class="form-control" id="recipient-name">
+              <input type="text" class="form-control" id="correo">
             </div>
             <div class="form-group">
               <label for="message-text" class="control-label">Contraseña:</label>
-              <input type="password" class="form-control" id="recipient-name">
+              <input type="password" class="form-control" id="contra">
             </div>
           </form>
         </div>
@@ -488,5 +482,5 @@
 	<script src="./js/index.js">
 
 	</script>
-</body>
+</body onscroll="pintarBarra()">
 </html>

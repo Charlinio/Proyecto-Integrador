@@ -1,5 +1,7 @@
 @extends('/includes/principal')
-
+@section('titulo')
+Usuarios
+@endsection
 @section('contenido')
 <div class="col-md-2 controlacta">
   <button type="button" name="button" class="nuevaacta" style="color: #3E8058;"><i class="fas fa-user-plus fa-5x"></i></button>
