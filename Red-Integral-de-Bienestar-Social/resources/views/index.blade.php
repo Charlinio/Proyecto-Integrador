@@ -125,7 +125,7 @@
 					</p>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<img src="./img/foto2.jpg" alt="" class="img-responsive">
+					<img src="{{asset('img/foto2.jpg')}}" alt="" class="img-responsive">
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 					<h4>Visión</h4>
@@ -427,32 +427,71 @@
 		</footer>
 
 		<!--1er modal para regisrar LOGIN-->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h4>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="recipient-name" class="control-label">Correo:</label>
-              <input type="text" class="form-control" id="correo">
-            </div>
-            <div class="form-group">
-              <label for="message-text" class="control-label">Contraseña:</label>
-              <input type="password" class="form-control" id="contra">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-					<button type="button" class="btn">Entrar</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h4>
+		      </div>
+		      <div class="modal-body">
+		        <form method="POST" action="{{ route('login') }}">
+		            @csrf
+
+		            <div class="form-group row">
+		                <label for="email" class="col-sm-4 col-form-label text-md-right">Correo Electronico</label>
+
+		                <div class="col-md-6">
+		                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+
+		                    @if ($errors->has('email'))
+		                        <span class="invalid-feedback">
+		                            <strong>{{ $errors->first('email') }}</strong>
+		                        </span>
+		                    @endif
+		                </div>
+		            </div>
+
+		            <div class="form-group row">
+		                <label for="password" class="col-md-4 col-form-label text-md-right">Contraseña</label>
+
+		                <div class="col-md-6">
+		                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+
+		                    @if ($errors->has('password'))
+		                        <span class="invalid-feedback">
+		                            <strong>{{ $errors->first('password') }}</strong>
+		                        </span>
+		                    @endif
+		                </div>
+		            </div>
+
+		            <div class="form-group row">
+		                <div class="col-md-6 offset-md-4">
+		                    <div class="checkbox">
+		                        <label>
+		                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Recordar
+		                        </label>
+		                    </div>
+		                </div>
+		            </div>
+
+		            <div class="form-group row mb-0">
+		                <div class="modal-footer">
+		                    <button type="submit" class="btn btn-primary">
+		                        Entrar
+		                    </button>
+
+		                    <a class="btn btn-link" href="{{ route('password.request') }}">
+		                        Olvidaste tu contraseña?
+		                    </a>
+		                </div>
+		            </div>
+		        </form>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 
 	<script src="./js/smooth-scroll.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

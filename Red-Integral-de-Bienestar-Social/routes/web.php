@@ -19,6 +19,8 @@ Route::group(['prefix'=>'admin','as'=>'admin.'],function(){
   Route::get('/usuarios', 'AdminUsuariosController@index');
   Route::get('/publicar', 'AdminPublicarController@index');
   Route::get('/finanzas', 'AdminFinanzasController@index');
+
+
   Route::resource('admin','AdminInicioController');
   Route::resource('actas','AdminActasController');
   Route::resource('eventos','AdminEventosController');
@@ -26,3 +28,6 @@ Route::group(['prefix'=>'admin','as'=>'admin.'],function(){
   Route::resource('publicar','AdminPublicarController');
   Route::resource('finanzas','AdminFinanzasController');
 });
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');

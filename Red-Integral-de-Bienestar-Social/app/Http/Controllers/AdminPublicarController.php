@@ -10,4 +10,9 @@ class AdminPublicarController extends Controller
     public function index(){
       return view('publicar');
     }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }
