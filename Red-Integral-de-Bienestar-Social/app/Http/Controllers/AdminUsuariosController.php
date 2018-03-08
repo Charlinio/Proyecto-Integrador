@@ -10,7 +10,7 @@ class AdminUsuariosController extends Controller
 {
     //
     public function index(){
-      return view('usuarias');
+      return view('usuarios');
     }
 
     public function __construct()

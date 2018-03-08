@@ -14,12 +14,16 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#"><i class="fas fa-bell"></i><span class="notificaiones">0</span> &nbsp&nbsp Notificaciones</a></li>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mi perfil
-            <span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mi perfil<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Cambiar Imagen</a></li>
-              <li><a href="#">Cerrar Sesión</a></li>
+              <li><a href="{{ route('logout') }}"
+                 onclick="event.preventDefault();
+                               document.getElementById('logout-form').submit();">Cerrar Sesión</a></li>
             </ul>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
           </li>
         </ul>
         <div class="navbar-right">
