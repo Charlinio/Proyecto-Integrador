@@ -2,7 +2,7 @@ body{
   font-family: 'Merriweather Sans', sans-serif;
 }
 
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
     width: 10px;
 }
 
@@ -13,11 +13,11 @@ body{
 ::-webkit-scrollbar-thumb {
   background-color: #818181;
   outline: 1px solid slategrey;
-}
+}*/
 
 .navbar{
   border-radius: 0;
-  background-color: /*#0064AF*/ #3E6990;
+  background-color: #3A5787;
   color: #FFF;
   border: 0;
   padding: 5px 35px 0px 50px;
@@ -95,9 +95,6 @@ ul.navbar-nav > li{
   color: #FFF;
 }
 
-.btn:hover{
-  color: #818181;
-}
 
 .navbar-inverse .navbar-nav li a {
     color: #FFF;
@@ -122,12 +119,15 @@ ul.navbar-nav > li{
 }
 
 div.vertical{
-  background-color: #272727;
+  background-color: #434242;
   height: 100vh;
   padding-top: 75px;
   color: #FFF;
   position: fixed;
-  overflow-y: scroll;
+}
+
+div.vertical div.cabeza{
+  margin: 20px 0px;
 }
 
 div.contenido{
@@ -152,23 +152,22 @@ div.vertical a{
   display: block;
   font-size: 1.5rem;
   text-align: center;
-  background-color: #transparent;
+  background-color: transparent;
+  padding: 15px 20px;
   /*text-transform: uppercase;*/
   color: #FFF;
-  -webkit-transition: font-size 0.1s, color 0.3s linear; /* Safari */
-   transition: font-size 0.1s, color 0.3s linear;
+  -webkit-transition: font-size 0.1s, color 0.3s, background-color 0.3s linear; /* Safari */
+   transition: font-size 0.1s, color 0.3s, background-color 0.3s linear;
 }
 
 div.vertical a:hover{
-  color: #D96161;
-}
-
-div.vertical div.row{
-    margin-bottom: 20px;
+  color: #a6a6a6;
+  background-color: #313131;
 }
 
 div.vertical a.activo{
-  color: #D96161;
+  color: #a6a6a6;
+  background-color: #313131;
 }
 
 div.vertical div.row h5:last-child{
@@ -274,7 +273,7 @@ div.contenido div, div.contenido div div{
 }
 
 .botones{
-  background-color: #3E6990;
+  background-color: #3A5787;
   color: #FFF;
   border: none;
   width: 150px;
@@ -325,13 +324,14 @@ div.contenido div, div.contenido div div{
 }
 
 div.titulo{
-  border-bottom: 1px solid #a6a6a6;
+  background-color: #E3E6EA;
   margin-bottom: 25px;
-  padding: 10px 10px 0px 0px;
+  padding: 10px 0px 10px 0px;
 }
 
 div.titulo h5{
-  color: #808080;
+  color: #a6a6a6;
+  font-size: 1.5rem;
 }
 
 .table{
@@ -378,4 +378,73 @@ div.publicacion img{
 .publico{
   text-align: left;
   line-height: 4;
+}
+
+.imgperfil{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.cabeceraUsuario{
+  margin: 100px;
+}
+
+.editarImagenUsuario{
+  width: 100px;
+  height: 100px;
+}
+
+.AsociacionesImg{
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+}
+
+.table > tbody > tr > td{
+  vertical-align: middle;
+}
+.table > tbody > tr:nth-child(even){
+  vertical-align: middle;
+  background-color: #E3E6EA;
+}
+
+.table > thead > tr > td{
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: #434242;
+  color: #FFF;
+}
+
+.cajacontroles{
+  margin: 20px 0px;
+}
+
+.controles{
+  background-color: #434242;
+  border: none;
+  outline: none;
+  color: #FFF;
+  font-size: 2rem;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.btnEdit{
+  background-color: #3A5787;
+  color: #FFF;
+}
+
+.btn-primary{
+  background-color: #3A5787;
+}
+
+.labeles{
+  text-align: right;
+  line-height: 2.4;
+}
+
+.obligatorio{
+  color: red;
 }

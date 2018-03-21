@@ -22,6 +22,9 @@
       @yield('contenido')
     </div>
     <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script defer src="../js/fontawesome-all.min.js"></script>
     @yield('scripts')
   </body>
 </html>

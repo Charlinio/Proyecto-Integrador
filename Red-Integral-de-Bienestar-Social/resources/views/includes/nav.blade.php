@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="#" class="navbar-brand"><img src="../img/logo5.png"></a>
+          <a href="#" class="navbar-brand"><img src="../img/logo4.png"></a>
         </div>
         <p class="navbar-text titula"> Red Integral de Bienetar Social </p>
         <p class="navbar-text"> | </p>

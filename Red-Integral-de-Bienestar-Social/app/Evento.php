@@ -11,6 +11,6 @@ class Evento extends Model
     //Llave primaraia
     protected $primaryKey = 'id_evento';
     protected $fillable = [
-      'titulo', 'descripcion', 'fecha', 'hora', 'lugar'
+      'titulo', 'descripcion', 'fecha_hora', 'lugar','imagen'
     ];
 }

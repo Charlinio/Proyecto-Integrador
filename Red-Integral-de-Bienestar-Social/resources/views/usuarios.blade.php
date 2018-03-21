@@ -3,17 +3,23 @@
 Usuarios
 @endsection
 @section('contenido')
-<div class="col-md-12 titulo">
+<div class="row titulo">
   <h5><i class="fas fa-user-plus"></i> Usuarios</h5>
 </div>
-<div class="col-md-2 controlacta">
-  <button type="button" name="button" class="nuevaacta" style="color: #3E8058;" data-toggle="modal" data-target="#registrarUsuario" data-whatever="@mdo"><i class="fas fa-user-plus fa-5x"></i></button>
-  <p>Registrar nuevo usuario</p>
-  <button type="button" name="button" class="nuevaacta" style="color: #3E8058;"><i class="fas fa-shield-alt fa-5x"></i></button>
-  <p>Permisos</p>
+<div class="col-md-2 cajacontroles">
+  <button type="button" name="button" data-toggle="modal" data-target="#registrarUsuario" data-whatever="@mdo"
+    class="controles">
+    <i class="fas fa-user-plus"></i>
+  </button>
+  <p>Nuevo usuario</p>
 </div>
-<div class="col-md-10">
+<div class="col-md-10 cajacontroles">
   @if($errors->any())
+    <div class="alert alert-danger alert-dismissable">
+      <ul>
+        <li>Error al agregar Usuario</li>
+      </ul>
+    </div>
     <div class="alert alert-warning alert-dismissable">
       <ul>
         @foreach($errors->all() as $error)
@@ -23,32 +29,68 @@ Usuarios
     </div>
   @endif
   @if(session()->has('mensaje'))
-    <div class="alert alert-success">
+    <div class="alert alert-info">
       {{ session()->get('mensaje') }}
     </div>
   @endif
-  <div class="col-md-3 cajausuarios">
-    <button type="button" name="button" class="carpetas" style="color: #878787"><i class="fas fa-user fa-5x"></i></button>
-    <p class="pt">Juan Pablo</p>
-  </div>
-  <div class="col-md-3 cajausuarios">
-    <button type="button" name="button" class="carpetas" style="color: #878787"><i class="fas fa-user fa-5x"></i></button>
-    <p class="pt">Pedro Ramon</p>
-  </div>
-  <div class="col-md-3 cajausuarios">
-    <button type="button" name="button" class="carpetas" style="color: #878787"><i class="fas fa-user fa-5x"></i></button>
-    <p class="pt">Gloria Martina</p>
-  </div>
-  <div class="col-md-3 cajausuarios">
-    <button type="button" name="button" class="carpetas" style="color: #878787"><i class="fas fa-user fa-5x"></i></button>
-    <p class="pt">Jose Diego</p>
-  </div>
-  <div class="col-md-3 cajausuarios">
-    <button type="button" name="button" class="carpetas" style="color: #878787"><i class="fas fa-user fa-5x"></i></button>
-    <p class="pt">Diana Laura</p>
-  </div>
 </div>
-
+  <div class="col-md-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <td><center>Id</center></td>
+          <td><center>Logo</center></td>
+          <td>Asociación Perteneciente</td>
+          <td>Nombre del Encargado</td>
+          <td>Privilegios</td>
+          <td>Correo de Contacto</td>
+          <td><center>Editar</center></td>
+          <td><center>Eliminar</center></td>
+        </tr>
+      </thead>
+      <tbody>
+        @forelse($usuarios as $usu)
+          <tr>
+            <td><center>{{ $usu->id }}</center></td>
+            <td><center><img src="../img/logo_asociacion/{{ $usu->logo }}" alt="" class="imgperfil"></center></td>
+            <td>{{ $usu->nombre }}</td>
+            <td>{{ $usu->name }}</td>
+            <td>{{ $usu->privilegios }}</td>
+            <td>{{ $usu->email }}</td>
+            <td><center>
+              <button
+              type="button"
+              name="button"
+              data-toggle="modal"
+              data-target="#editarUsuario"
+              data-whatever="@mdo"
+              class="btn btnEdit"
+              data-id="{{ $usu->id }}"
+              data-nombre="{{ $usu->name }}"
+              data-email="{{ $usu->email }}"
+              data-asociacion="{{ $usu->asociacion }}">
+                <i class="fas fa-edit"></i>
+              </button>
+            </center></td>
+            <td><center>
+              <button
+                type="submit"
+                class="btn btn-danger btnDelete"
+                data-toggle="modal"
+                data-target="#eliminarUsuario"
+                data-whatever="@mdo"
+                data-nombre="{{ $usu->name }}"
+                data-id="{{ $usu->id }}">
+                <i class="fas fa-times"></i>
+              </button>
+            </center></td>
+          </tr>
+        @empty
+          <p>Sin registros</p>
+        @endforelse
+      </tbody>
+    </table>
+  </div>
 
 <!--Modal para registrar Usuario -->
 <div class="modal fade" id="registrarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -56,56 +98,170 @@ Usuarios
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="registrarUsuarioLabel">Registrar Usuario</h4>
+        <h4 class="modal-title" id="registrarUsuarioLabel">Registrando Nuevo Usuario</h4>
       </div>
       <div class="modal-body">
-        {{ Form::open(array('url' => '/admin/usuarios', 'files' => true)) }}
-        <div class="input-group col-md-12">
-          <label for="nombre">Nombre: </label>
-          {{ Form::text('nombre', '', array('class' => 'form-control', 'placeholder' => 'Nombre')) }}
+        {{ Form::open(array('url' => '/admin/usuarios')) }}
+        <div class="form-group row">
+          <label for="nombre" class="col-md-5 labeles"><span class="obligatorio">*</span> Nombre del Encargado: </label>
+          <div class="col-md-7">
+            {{ Form::text('nombre', '', array('class' => 'form-control', 'placeholder' => 'Nombre')) }}
+          </div>
         </div>
-        <br>
-        <div class="input-group col-md-12">
-          <label for="correo">Correo Electrónico: </label>
-          {{ Form::email('correo', '', array('class' => 'form-control', 'placeholder' => 'Correo')) }}
+        <div class="form-group row">
+          <label for="asociacion" class="col-md-5 labeles"><span class="obligatorio">*</span> Asociación Perteneciente: </label>
+          <div class="col-md-7">
+            <select class="form-control" name="aso">
+              @forelse($asociaciones as $asociacion)
+                <option value="{{ $asociacion->id_asociacion }}">{{ $asociacion->nombre }}</option>
+              @empty
+                <option value=""></option>
+              @endforelse
+            </select>
+          </div>
         </div>
-        <br>
-        <div class="input-group row">
-          <div class="col-md-6">
-            <label for="p1">Contraseña: </label>
+        <div class="form-group row">
+          <label for="correo" class="col-md-5 labeles"><span class="obligatorio">*</span> Correo Electrónico: </label>
+          <div class="col-md-7">
+            {{ Form::email('correo', '', array('class' => 'form-control', 'placeholder' => 'Correo')) }}
+          </div>
+        </div>
+        <div class="form-group row">
+            <label for="p1" class="col-md-5 labeles"><span class="obligatorio">*</span> Contraseña: </label>
+          <div class="col-md-7">
             {{ Form::password('p1', array('class' => 'form-control', 'placeholder' => 'Contraseña')) }}
           </div>
-          <div class="col-md-6">
-            <label for="p2">Confirmar Contraseña: </label>
+        </div>
+        <div class="form-group row">
+          <label for="p2" class="col-md-5 labeles"><span class="obligatorio">*</span> Confirmar Contraseña: </label>
+          <div class="col-md-7">
             {{ Form::password('p2', array('class' => 'form-control', 'placeholder' => 'Confirmar Contraseña')) }}
           </div>
         </div>
-        <br>
-        <div class="input-group col-md-12">
-          <label for="nivel">Nivel: </label>
-          {{ Form::select('nivel', array('Normal', 'Administrador'), null, array('class' => 'form-control')) }}
+        <div class="form-group row">
+          <label for="nivel" class="col-md-5 labeles"><span class="obligatorio">*</span> Nivel de Privilegio: </label>
+          <div class="col-md-7">
+            <select class="form-control" name="nivel">
+              <option value="Normal">Normal</option>
+              <option value="Administrador">Administrador</option>
+            </select>
+          </div>
         </div>
-        <br>
-        <div class="input-group col-md-12">
-          <label for="imagen">Imagen: </label>
-          {{ Form::file('imagen', array('class' => 'form-control')) }}
         </div>
-        <br>
-        <br>
-        <br>
-        <div class="input-group col-md-12">
-          {{ Form::submit('Guardar', array('class' => 'btn btn-primary col-md-12')) }}
+        <div class="modal-footer">
+          {{ Form::submit('Guardar', array('class' => 'btn btn-primary')) }}
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
         </div>
-        <br>
         {{ Form::close() }}
+    </div>
+  </div>
+</div>
+
+<!--Modal para editar Usuario -->
+<div class="modal fade" id="editarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="editarUsuarioLabel">Editando a: <b id="editando">Nombre</b></h4>
       </div>
+      {!! Form::open(array('route'=>['admin.usuarios.edit', $usu->id], 'method'=>'GET')) !!}
+      <div class="modal-body">
+        <input type="hidden" name="idEditar" value="" id="idEditar">
+        <div class="form-group row">
+          <label for="nombreE" class="col-md-5 labeles">Nombre del Encargado:</label>
+          <div class="col-md-7">
+            <input type="text" name="nombreE" id="nombreE" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="asociacionE" class="col-md-5 labeles">Asociación Perteneciente:</label>
+            <div class="col-md-7">
+              <select class="form-control" name="asociacionE" id="asociacionE">
+                @forelse($asociaciones as $asociacion)
+                  <option value="{{ $asociacion->id_asociacion }}">{{ $asociacion->nombre }}</option>
+                @empty
+                  <option value=""></option>
+                @endforelse
+              </select>
+            </div>
+        </div>
+        <div class="form-group row">
+          <label for="emailE" class="col-md-5 labeles">Correo Electrónico:</label>
+          <div class="col-md-7">
+            <input type="email" name="emailE" id="emailE" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="pE" class="col-md-5 labeles">Contraseña:</label>
+          <div class="col-md-7">
+            <input type="password" name="pE" id="pE" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="nivelE" class="col-md-5 labeles">Nivel de Privilegio:</label>
+          <div class="col-md-7">
+            <select class="form-control" name="nivelE" id="nivelE">
+              <option value="Administrador">Administrador</option>
+              <option value="Normal">Normal</option>
+            </select>
+          </div>
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" name="button">Guardar Cambios</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        </div>
+        {!! Form::close() !!}
+    </div>
+  </div>
+</div>
+
+<!--Modal para eliminar Usuario -->
+<div class="modal fade" id="eliminarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="eliminarUsuarioLabel">Eliminando a: <b id="eliminando">Nombre</b></h4>
+      </div>
+      {!! Form::open(array('route'=>['admin.usuarios.destroy', $usu->id], 'method'=>'delete')) !!}
+      <div class="modal-body">
+        <input type="hidden" name="idEliminar" value="" id="idEliminar">
+        <label for="">Seguro que desea eliminar este registro?</label>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger" name="button">Eliminar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+      </div>
+        {!! Form::close() !!}
     </div>
   </div>
 </div>
 @endsection
 
 @section('scripts')
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <script defer src="../js/fontawesome-all.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".btnEdit").on('click', function(){
+        var n = $(this).data('nombre');
+        var a = $(this).data('asociacion');
+        var e = $(this).data('email');
+        var id = $(this).data('id');
+
+        $("#idEditar").val(id);
+        $("#nombreE").val(n);
+        $("#asociacionE").val(a);
+        $("#emailE").val(e);
+        $('#editando').text(n);
+      });
+      $(".btnDelete").on('click', function(){
+        var n = $(this).data('nombre');
+        var id = $(this).data('id');
+
+        $("#idEliminar").val(id);
+        $('#eliminando').text(n);
+      });
+    });
+  </script>
 @endsection

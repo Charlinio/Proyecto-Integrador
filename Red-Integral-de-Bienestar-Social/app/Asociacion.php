@@ -12,7 +12,7 @@ class Asociacion extends Model
     protected $primaryKey = 'id_asociacion';
     //Campos manipulables
     protected $fillable = [
-      'nombre','contacto','correo','descripcion'
+      'nombre','contacto','correo','descripcion', 'logo', 'web'
     ];
 
 }

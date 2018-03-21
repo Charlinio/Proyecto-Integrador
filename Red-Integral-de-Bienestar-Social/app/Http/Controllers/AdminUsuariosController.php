@@ -10,7 +10,20 @@ class AdminUsuariosController extends Controller
 {
     //
     public function index(){
-      return view('usuarios');
+      $registros = \DB::table('users')
+        ->select('users.*','asociaciones.*')
+        ->join('asociaciones', 'users.asociacion', '=', 'asociaciones.id_asociacion')
+        ->orderBy('id','asc')
+        //->take(10)
+        ->get();
+
+        $asociaciones = \DB::table('asociaciones')
+          ->get();
+
+      return view('usuarios')
+        ->with('usuarios', $registros)
+        ->with('asociaciones', $asociaciones);
+
     }
 
     public function __construct()
@@ -25,7 +38,7 @@ class AdminUsuariosController extends Controller
         'p1'=>'required|max:255',
         'p2'=>'required|max:255',
         'nivel'=>'required',
-        'imagen'=>'required|image|mimes:jpeg, png, jpg, gif, svg|max:2048'
+        'aso'=>'required'
       ]);
       if ($validator->fails()) {
         //Quiere decir que no esta correcto
@@ -33,17 +46,30 @@ class AdminUsuariosController extends Controller
                 ->withInput()
                 ->withErrors($validator);
       }else{
-        $nombreImg = time() . '.' . $req->imagen->getClientOriginalExtension();
-        $req->imagen->move(public_path('/img/usuarios'), $nombreImg);
         User::create([
           'name'=>$req->nombre,
           'email'=>$req->correo,
           'password'=>bcrypt($req->p1),
           'privilegios'=>$req->nivel,
-          'img_perfil'=>$nombreImg
+          'asociacion'=>$req->aso
         ]);
         return redirect()->to('/admin/usuarios')
                 ->with('mensaje','Usuario Agregado');
       }
+    }
+
+    public function destroy(Request $req){
+      $usuario = User::find($req->idEliminar);
+      $usuario->delete();
+      return redirect('/admin/usuarios');
+    }
+
+    public function edit(Request $req){
+      $usuario = User::find($req->idEditar);
+      $usuario->name = $req->nombreE;
+      $usuario->email = $req->emailE;
+      $usuario->save();
+      return redirect()->to('/admin/usuarios')
+        ->with('mensaje','Usuario Modificado');
     }
 }
