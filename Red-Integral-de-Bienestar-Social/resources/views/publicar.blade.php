@@ -3,22 +3,37 @@
 Publicar
 @endsection
 @section('contenido')
-<div class="col-md-12 titulo">
+<div class="row titulo">
   <h5><i class="fas fa-share-square"></i> Publicar</h5>
 </div>
 <div class="col-md-12">
   <div class="col-md-6 col-md-offset-3">
+    @forelse($nombreAsociacion as $n)
+      <h5 hidden>{{ $n->nombre }}</h5>
+    @empty
+      <h5>no</h5>
+    @endforelse
     <img src="../img/logosolo.png" style="width:50px;height:50px;float:left;margin-right:5px;margin-left:50px;"alt="">
     <p style="text-align:left;line-height:4;">Red Integral de Bienestar Social</p>
-    <textarea name="name" rows="6" cols="60" placeholder="Publicar" style="padding:5px;"></textarea>
+    {{ Form::open(array('url' => '/admin/publicar')) }}
+    <textarea name="txtpublicar" rows="6" cols="60" placeholder="Publicar" style="padding:5px;"></textarea>
     <br><br>
     <div class="col-md-offset-8">
-      <button type="button" name="button">Adjuntar</button>
-      <button type="button" name="button">Publicar</button>
+      <button type="button" name="btnadjuntar">Adjuntar</button>
+      <button type="submit" name="btnpublicar">Publicar</button>
     </div>
+    {{ Form::close() }}
   </div>
 </div>
 <div class="col-md-12">
+  @forelse($publicaciones as $publicacion)
+  <div class="col-md-6 col-md-offset-3 publicacion">
+    <img src="../img/logosolo.png" alt="">
+    <p class="publico">{{ $n->nombre }} ({{Auth::user()->name}}) publicó:</p>
+    <p style="text-align: left;">{{ $publicacion->publicacion }}</p>
+  </div>
+  @empty
+  @endforelse
   <div class="col-md-6 col-md-offset-3 publicacion">
     <img src="../img/logosolo.png" alt="">
     <p class="publico">RIBS publicó:</p>

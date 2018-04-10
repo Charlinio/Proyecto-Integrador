@@ -3,7 +3,7 @@
 Inicio
 @endsection
 @section('contenido')
-<div class="col-md-12 titulo">
+<div class="row titulo">
   <h5><i class="fas fa-home"></i> Inicio</h5>
 </div>
 <div class="row">

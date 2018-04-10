@@ -302,7 +302,7 @@ div.contenido div, div.contenido div div{
 
 .convocatoriona{
   text-decoration: none;
-  background-color: #3E6990;
+  background-color: #3A5787;
   color: white;
   padding: 10px;
   width: 200px;
@@ -343,12 +343,12 @@ table th, table td{
 }
 
 table th{
-  background-color: #3E6990;
+  background-color: #3A5787;
   color: #fff;
 }
 
 .cuots th{
-  background-color: #E65F5C;
+  background-color: #3A5787;
   color: #fff;
 }
 
@@ -447,4 +447,19 @@ div.publicacion img{
 
 .obligatorio{
   color: red;
+}
+
+.controltabla{
+  background-color: #434242;
+  border: none;
+  outline: none;
+  color: #FFF;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  border-radius: 5px;
+}
+.btnCuota{
+  background-color: #04B45F;
+  color: #FFF;
 }

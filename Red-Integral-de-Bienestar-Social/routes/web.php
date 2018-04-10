@@ -19,6 +19,7 @@ Route::group(['prefix'=>'admin','as'=>'admin.'],function(){
   Route::get('/usuarios', 'AdminUsuariosController@index');
   Route::get('/publicar', 'AdminPublicarController@index');
   Route::get('/finanzas', 'AdminFinanzasController@index');
+  //Route::post('/finanzas/e', 'AdminFinanzasController@insrt');
   Route::get('/asociaciones', 'AdminAsociacionesController@index');
 
 

@@ -17,8 +17,8 @@ class AdminUsuariosController extends Controller
         //->take(10)
         ->get();
 
-        $asociaciones = \DB::table('asociaciones')
-          ->get();
+      $asociaciones = \DB::table('asociaciones')
+        ->get();
 
       return view('usuarios')
         ->with('usuarios', $registros)
@@ -36,7 +36,7 @@ class AdminUsuariosController extends Controller
         'nombre'=>'required|max:255',
         'correo'=>'required|email',
         'p1'=>'required|max:255',
-        'p2'=>'required|max:255',
+        'p2'=>'required|max:255|same:p1',
         'nivel'=>'required',
         'aso'=>'required'
       ]);
@@ -68,6 +68,8 @@ class AdminUsuariosController extends Controller
       $usuario = User::find($req->idEditar);
       $usuario->name = $req->nombreE;
       $usuario->email = $req->emailE;
+      $usuario->asociacion = $req->asociacionE;
+      $usuario->privilegios = $req->nivelE;
       $usuario->save();
       return redirect()->to('/admin/usuarios')
         ->with('mensaje','Usuario Modificado');

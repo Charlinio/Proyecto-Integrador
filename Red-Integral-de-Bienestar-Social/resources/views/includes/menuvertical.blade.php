@@ -3,7 +3,7 @@
     <div class="contenedorimagen">
       <img src="../img/logoribs.png" alt="">
     </div>
-    <h5>Ing. Cristina Rodríguez</h5>
+    <h5>{{ Auth::user()->name }}</h5>
   </div>
   <div class="row">
     <a href="{{ url('/admin') }}" class="{{ Request::is('admin') ? 'activo' : '' }}">

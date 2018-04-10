@@ -68,7 +68,8 @@ Usuarios
               data-id="{{ $usu->id }}"
               data-nombre="{{ $usu->name }}"
               data-email="{{ $usu->email }}"
-              data-asociacion="{{ $usu->asociacion }}">
+              data-asociacion="{{ $usu->asociacion }}"
+              data-nivel="{{ $usu->privilegios }}">
                 <i class="fas fa-edit"></i>
               </button>
             </center></td>
@@ -129,13 +130,14 @@ Usuarios
         <div class="form-group row">
             <label for="p1" class="col-md-5 labeles"><span class="obligatorio">*</span> Contraseña: </label>
           <div class="col-md-7">
-            {{ Form::password('p1', array('class' => 'form-control', 'placeholder' => 'Contraseña')) }}
+            {{ Form::password('p1', array('class' => 'form-control', 'placeholder' => 'Contraseña', 'id'=>'txtPass')) }}
           </div>
         </div>
         <div class="form-group row">
           <label for="p2" class="col-md-5 labeles"><span class="obligatorio">*</span> Confirmar Contraseña: </label>
           <div class="col-md-7">
-            {{ Form::password('p2', array('class' => 'form-control', 'placeholder' => 'Confirmar Contraseña')) }}
+            {{ Form::password('p2', array('class' => 'form-control', 'placeholder' => 'Confirmar Contraseña', 'id'=>'txtConfirmar')) }}
+            <p id="lblError" style="color:#FF0000;font-size:1rem;text-align:left;"></p>
           </div>
         </div>
         <div class="form-group row">
@@ -248,11 +250,13 @@ Usuarios
         var a = $(this).data('asociacion');
         var e = $(this).data('email');
         var id = $(this).data('id');
+        var niv = $(this).data('nivel');
 
         $("#idEditar").val(id);
         $("#nombreE").val(n);
         $("#asociacionE").val(a);
         $("#emailE").val(e);
+        $('#nivelE').val(niv);
         $('#editando').text(n);
       });
       $(".btnDelete").on('click', function(){
@@ -261,6 +265,16 @@ Usuarios
 
         $("#idEliminar").val(id);
         $('#eliminando').text(n);
+      });
+      $("#txtConfirmar").on('keyup', function(){
+        var pass = $('#txtPass').val();
+        var conf = $(this).val();
+
+        if(pass != conf){
+          $('#lblError').text('Las Contraseñas no coinciden');
+        }else{
+          $('#lblError').text('');
+        }
       });
     });
   </script>
